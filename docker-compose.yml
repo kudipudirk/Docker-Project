@@ -1,9 +1,9 @@
 networks:
   # The presence of these objects is sufficient to define them
-  rama: {}
+  rama: {}  #To create the own docker network
 
 volumes:
-  mysql-data:
+  mysql-data: #To create the docker volume
 
 services:
   mysql:
