@@ -19,7 +19,7 @@ services:
     command: sh -c "sleep 5 && node /opt/backend/index.js"
     networks:
     - rama
-    depend_on:
+    depends_on:
     - mysql
     container_name: backend
 
@@ -30,6 +30,6 @@ services:
     container_name: frontend
     ports:
     - 80:80
-    depend_on:
+    depends_on:
     - backend
   
