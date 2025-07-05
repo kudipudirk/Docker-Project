@@ -7,7 +7,7 @@ volumes:
 
 services:
   mysql:
-    image: mysql:1.0.0
+    image: kudipudirk/mysql
     networks:
       - rama
     container_name: mysql
@@ -15,7 +15,7 @@ services:
       - mysql-data:/var/lib/mysql
 
   backend:
-    image: backend:1.0.0
+    image: kudipudirk/backend
     command: sh -c "sleep 15 && node /opt/backend/index.js"
     networks:
     - rama
@@ -24,7 +24,7 @@ services:
     container_name: backend
 
   frontend:
-    image: frontend:1.0.0
+    image: kudipudirk/frontend
     networks:
     - rama
     container_name: frontend
